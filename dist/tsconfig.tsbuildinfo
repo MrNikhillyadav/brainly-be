@@ -1,0 +1,1 @@
+{"root":["../api/config.ts","../api/index.ts","../api/override.d.ts","../api/middlewares/authmiddleware.ts","../api/models/model.ts","../api/routes/brain.ts","../api/routes/content.ts","../api/routes/user.ts"],"version":"5.8.3"}

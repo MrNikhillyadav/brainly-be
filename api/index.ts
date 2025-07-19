@@ -14,6 +14,13 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.get('/',(req,res) => {
+    res.json({
+        message :"server is healthy"
+    })
+})
+
+
 app.use('/api/v1/user',  userRouter)
 app.use('/api/v1/content', authMiddleware , contentRouter)
 app.use('/api/v1/brain', authMiddleware , brainRouter)
