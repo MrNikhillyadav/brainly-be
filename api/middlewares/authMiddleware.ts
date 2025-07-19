@@ -1,8 +1,6 @@
 import { NextFunction,Request,Response } from "express";
 import jwt, { JwtPayload } from 'jsonwebtoken';
-import { UserModel } from "../models/model";
 import { JWT_SECRET } from "../config";
-console.log('JWT_SECRET: ', JWT_SECRET);
 
 
 interface CustomRequest extends Request {
