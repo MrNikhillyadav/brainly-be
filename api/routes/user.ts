@@ -65,7 +65,7 @@ userRouter.post('/signin', async(req, res) => {
 
             const token =  jwt.sign({
                 id : user._id.toString()
-            }, JWT_SECRET)
+            }, JWT_SECRET || "")
     
             res.status(200).json({
                 message: "logged in!",

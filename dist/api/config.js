@@ -14,11 +14,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.JWT_SECRET = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
-console.log('DATABASE_URI', process.env.DATABASE_URI);
 function ConnectDB() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            yield mongoose_1.default.connect(process.env.MONGO_URI || "mongodb+srv://nikyadav20032003:e0u1Gam4rdA2ap6f@cluster0.orazjtw.mongodb.net/brain");
+            yield mongoose_1.default.connect(process.env.DATABASE_URI || "");
             console.log('db connected');
         }
         catch (e) {
@@ -28,4 +27,4 @@ function ConnectDB() {
     });
 }
 exports.default = ConnectDB;
-exports.JWT_SECRET = "DFHHQIEIR4568";
+exports.JWT_SECRET = process.env.JWT_SECRET;

@@ -59,7 +59,7 @@ userRouter.post('/signin', (req, res) => __awaiter(void 0, void 0, void 0, funct
         if (decodedPassword) {
             const token = jsonwebtoken_1.default.sign({
                 id: user._id.toString()
-            }, config_1.JWT_SECRET);
+            }, config_1.JWT_SECRET || "");
             res.status(200).json({
                 message: "logged in!",
                 token
