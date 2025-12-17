@@ -17,3 +17,4 @@ async function ConnectDB() {
 export default ConnectDB;
 
 export const JWT_SECRET = process.env.JWT_SECRET;
+export const PORT = process.env.PORT || 4000;

@@ -3,7 +3,7 @@ dotenv.config();
 import express from 'express';
 import cors from 'cors';
 import userRouter from './routes/user';
-import ConnectDB from './config';
+import ConnectDB, { PORT } from './config';
 import contentRouter from './routes/content';
 import authMiddleware from './middlewares/authMiddleware';
 import brainRouter from './routes/brain';
